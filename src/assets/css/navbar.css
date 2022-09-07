@@ -1,0 +1,13 @@
+nav {
+    background-color: #56aab2;
+    font-family: 'Trocchi';
+}
+.logo {
+    width: 10vh;
+}
+.navbar-toggler {
+    background-color: rgb(240, 224, 224) !important;
+}
+i {
+    color: white;
+}
