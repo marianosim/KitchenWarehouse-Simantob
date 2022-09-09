@@ -1,6 +1,5 @@
 nav {
     background-color: #56aab2;
-    font-family: 'Trocchi';
 }
 .logo {
     width: 10vh;
@@ -10,4 +9,7 @@ nav {
 }
 i {
     color: white;
+}
+.cart-icon {
+    font-size: 1.5em;
 }
