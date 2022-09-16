@@ -1,13 +1,24 @@
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import './ItemListContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
+import getItems from '../../services/MockApi';
+import ItemList from '../Products/ItemList';
 
 export default function ItemListContainer({ greeting }) {
+
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    getItems()
+    .then(data => {
+      setItems(data)
+    })
+  }, []);
   return (
     <div>
         <Container fluid className='product-list'>
         <h4 className='greeting'>{greeting}</h4>
-        <ItemCount initial={1} stock={5}/>
+        <ItemList items={items}/>
         </Container>
     </div>
   )
