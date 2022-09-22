@@ -13,7 +13,7 @@ import CartWidget from './CartWidget';
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg">
       <Container fluid>
         <NavbarBrand href='#'><img src={logo} alt='logo' className='logo'/></NavbarBrand>
         <Navbar.Brand href="#">Kitchen Warehouse</Navbar.Brand>

@@ -2,7 +2,7 @@ const data = [
     {
         id:1,
         title:"Batidora Kitchenaid Artisan 4,8 lts Rojo",
-        description:null,
+        description:'Batidora Kitchen Aid de acero inóxidable color rojo. Capacidad del bowl: 4,8lts. Motor de 325W de potencia y 10 velocidades. Incluye un batidor plano para mezclar unificando ingredientes, 1 batidor globo para batir incorporando aire, 1 gancho amasador y 1 tapa antisalpicaduras.',
         price:"$67216.89",
         category:"Jewelry",
         image:"https://res.cloudinary.com/dzxg6dw84/image/upload/v1663294191/KitchenWarehouse/Captura_de_Pantalla_2022-09-15_a_la_s_22.46.12_hqegtu.png"
@@ -70,5 +70,15 @@ export default function getItems() {
         resolve(data);
     }, 2000);
   });
-}
+};
+
+export const getSingleItem = (idItem) => {
+  return new Promise((resolve, reject) => {
+    let findItem = data.find(item => item.id === parseInt(idItem));
+        setTimeout(() => {
+            findItem? resolve(findItem) : reject(new Error('Item no encontrado')); 
+            }, 3000);
+        }
+    )
+};
 

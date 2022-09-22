@@ -1,0 +1,21 @@
+.product-detail{
+    display: flex;
+    margin-top: 4em;
+}
+.product-detail h2{
+    margin-bottom: 1em;
+}
+.product-detail h4{
+    margin-top: 1em;
+}
+.product-detail-image{
+    padding-left: 3%;
+    padding-right: 5%;
+}
+.product-description{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: auto;
+    padding-top: 5rem;
+    padding-right: 8em;
+}

@@ -1,10 +1,7 @@
 .item-qty-container {
-    text-align: center;
-}
-.item-qty-btns {
-    padding: 4%;
+    text-align: left;
 }
 .item-qty{
     font-size: 18px;
-    padding: 8%;
+    padding: 2%;
 }

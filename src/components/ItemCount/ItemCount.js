@@ -12,19 +12,12 @@ function ItemCount({initial, stock}) {
         count > 1 ? setCount(count - 1) : setCount(initial)
     }
   return (
-    <>
-
        <div className='item-qty-container'>
-            <div className='item-qty-btns'>
-                <Button variant="outline-dark" onClick={handleSubstract}>-</Button>
+                <Button variant="outline-primary" onClick={handleSubstract}>-</Button>
                 <span className='item-qty'>{count}</span>
-                <Button variant="outline-dark" onClick={handleAdd}>+</Button>
-            </div>
-            <div>
-                <Button variant="outline-dark" className='add-to-cart-btn'>Agregar al carrito</Button>
-            </div>
-        </div>             
-    </>
+                <Button variant="outline-primary" className='add-btn' onClick={handleAdd}>+</Button>
+                <Button variant="primary m-4" className='add-to-cart-btn'>Agregar al carrito</Button>
+        </div>
   )
 }
 

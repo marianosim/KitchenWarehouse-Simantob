@@ -14,7 +14,6 @@ function Item({item}) {
                     {item.description}
                     {item.price}
                     </Card.Text>
-                    <ItemCount initial={1} stock={5}/>
                 </Card.Body>
             </Card>
     </>
