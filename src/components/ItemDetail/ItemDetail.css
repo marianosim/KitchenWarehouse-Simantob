@@ -1,21 +1,24 @@
 .product-detail{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 4em;
 }
 .product-detail h2{
     margin-bottom: 1em;
+    font-weight: bold;
 }
 .product-detail h4{
     margin-top: 1em;
 }
 .product-detail-image{
-    padding-left: 3%;
-    padding-right: 5%;
+    padding-left: 1%;
+    max-width: 100%;
 }
 .product-description{
     font-size: 1.5rem;
+    width: auto;
     text-align: justify;
     margin: auto;
     padding-top: 5rem;
-    padding-right: 8em;
+    padding-right: 1em;
 }

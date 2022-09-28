@@ -1,8 +1,9 @@
 nav {
-    background-color: #cce3de;
+    /* background-color: #cce3de; */
+    background-color: rgb(31, 23, 23);
 }
 .logo {
-    width: 10vh;
+    width: 12vh;
 }
 .navbar-toggler {
     background-color: rgb(240, 224, 224) !important;
@@ -12,4 +13,33 @@ i {
 }
 .cart-icon {
     font-size: 1.5em;
+    color: #B26C4B;
+}
+.brand-title{
+    text-align: center;
+    text-decoration: none !important;
+    color: #B26C4B !important;
+    /* color: white !important; */
+    font-size: 1em !important;
+    font-weight: bold;
+}
+.navbar-link{
+    color: #B26C4B !important;
+    font-weight: bold !important;
+}
+#navbarScrollingDropdown{
+    color: #B26C4B;
+}
+.navbar-alert{
+    display: flex;
+    justify-content: right;
+}
+.register-link{
+    font-size: 1rem !important;
+    padding-right: 1em !important;
+    font-weight: bold !important;
+}
+.sign-in-link{
+    font-size: 1rem !important;
+    font-weight: bold !important;
 }

@@ -1,16 +1,24 @@
 //import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   let greeting = '¡Bienvenidos a nuestra tienda!';
   return (
     <div className="App">
-      <NavBar />
-      {/*<ItemListContainer greeting={greeting}/>*/}
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={greeting}/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+          <Route path='/category/:cat' element={<ItemListContainer />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

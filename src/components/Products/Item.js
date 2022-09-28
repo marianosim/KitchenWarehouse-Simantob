@@ -1,21 +1,25 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import ItemCount from '../ItemCount/ItemCount';
+import Button from 'react-bootstrap/Button';
 import './Item.css';
+import { Link } from 'react-router-dom';
 
-function Item({item}) {
+function Item({ item }) {
   return (
     <>
-         <Card style={{ width: '22rem', margin: '2%'}}>
-            <Card.Img variant="top" src={item.image} className='product-image' />
-                <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text>
-                    {item.description}
-                    {item.price}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+      <Card style={{ width: '22rem', margin: '2%', textDecoration: 'none' }}>
+        <Link to={`/item/${item.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Card.Img variant="top" src={item.image} className='product-image' />
+          <Card.Body>
+            <Card.Title>{item.title}</Card.Title>
+            <Card.Text>
+              {item.price}
+            </Card.Text>
+          </Card.Body>
+          <Button>Ver más</Button>
+        </Link>
+
+      </Card>
     </>
   )
 }
