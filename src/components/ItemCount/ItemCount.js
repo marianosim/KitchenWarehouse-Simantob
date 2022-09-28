@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css';
 
-function ItemCount({ initial, stock }) {
+function ItemCount({ initial, stock, onAddToCart }) {
     const [count, setCount] = useState(initial);
 
     const handleAdd = () => {
@@ -16,7 +16,7 @@ function ItemCount({ initial, stock }) {
             <Button variant="outline-primary" onClick={handleSubstract}>-</Button>
             <span className='item-qty'>{count}</span>
             <Button variant="outline-primary" className='add-btn' onClick={handleAdd}>+</Button>
-            <Button variant="primary m-4" className='add-to-cart-btn'>Agregar al carrito</Button>
+            <Button variant="primary m-4" className='add-to-cart-btn' onClick={() => onAddToCart(count)}>Agregar al carrito</Button>
         </div>
     )
 }

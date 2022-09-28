@@ -9,7 +9,7 @@ import logo from '../../assets/Images/KWLogoOnly.png';
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { NavbarBrand, NavItem } from 'react-bootstrap';
+import { NavbarBrand } from 'react-bootstrap';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
 

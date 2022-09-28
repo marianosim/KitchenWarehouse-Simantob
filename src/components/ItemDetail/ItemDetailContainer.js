@@ -21,10 +21,10 @@ function ItemDetailContainer() {
   }, 2000)
 
   return (
-    <Container fluid>
-      {isLoading && <LoadSpinner/>}
+    <Container fluid >
+      {isLoading && <LoadSpinner />}
       {isLoading ||
-      <ItemDetail item={item} />}
+        <ItemDetail item={item} />}
     </Container>
   )
 }

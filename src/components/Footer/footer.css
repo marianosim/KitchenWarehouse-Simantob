@@ -1,9 +1,17 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5em;
+}
 .footer{
     background: black;
     height: 4em;
     position: relative;
     display: flex;
     justify-content: center;
+    bottom: 0%;
 }
 .footer-content {
     font-size: 0.8em;

@@ -17,7 +17,7 @@ export default function ItemListContainer({ greeting }) {
       getItems()
         .then(data => {
           setItems(data)
-         })        
+        })
     } else {
       getItemsByCategory(cat)
         .then(data => setItems(data))
@@ -29,12 +29,12 @@ export default function ItemListContainer({ greeting }) {
   return (
     <>
       <Container fluid className='product-list'>
-      {isLoading && <LoadSpinner/>}
-      {isLoading || 
-      <div>
-          <h4 className='greeting'>{greeting}</h4>
-        <ItemList items={items} />
-      </div>}
+        {isLoading && <LoadSpinner />}
+        {isLoading ||
+          <div>
+            <h4 className='greeting'>{greeting}</h4>
+            <ItemList items={items} />
+          </div>}
       </Container>
     </>
   )
