@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Image from 'react-bootstrap/Image';
 import { Container } from 'react-bootstrap';
 import './ItemDetail.css';
@@ -6,13 +6,18 @@ import ItemCount from '../ItemCount/ItemCount';
 import Button from 'react-bootstrap/Button';
 import Rating from '../Rating/Rating';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 
 function ItemDetail({ item }) {
   const [itemsOnCart, setItemsOnCart] = useState(false);
+  const [qty, setQty] = useState(1);
 
-  const handleAddToCart = (count) => {
-    alert(`Agregaste ${count} producto/s a tu carrito`)
+  const { addItem } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addItem(item, qty);
+    // alert(`Agregaste ${qty} producto/s a tu carrito`)
     setItemsOnCart(true);
   }
   return (
@@ -24,7 +29,7 @@ function ItemDetail({ item }) {
           <Rating />
           <h4>{item.price}</h4>
           {!itemsOnCart ?
-            <ItemCount initial={1} stock={5} onAddToCart={handleAddToCart} /> : <Button as={Link} to={'/cart'}>Finalizar compra</Button>}
+            <ItemCount qty={qty} setQty={setQty} stock={5} onAddToCart={handleAddToCart} /> : <Button as={Link} to={'/cart'}>Finalizar compra</Button>}
         </div>
         <div className='fluid product-description'>
           <p>{item.description}</p>

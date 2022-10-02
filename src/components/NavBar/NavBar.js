@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Alert from 'react-bootstrap/Alert';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../assets/Images/KWLogoOnly.png';
+import logo from '../../assets/Images/KWLogo_redVariant.png';
 import './navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -61,7 +61,7 @@ function NavBar() {
           <Nav.Link href='#action4' className='p-4'><CartWidget /></Nav.Link>
         </Container>
       </Navbar>
-      <Alert variant='secondary'>
+      <Alert variant='secondary' style={{borderTop: '2px solid #c3bfbf', borderBottom: '2px solid #c3bfbf'}}>
         <div className='navbar-alert'>
         <Nav.Link as={Link} to='/' className='register-link'>Creá tu cuenta</Nav.Link>
         <Nav.Link as={Link} to='/' className='sign-in-link'>Iniciá Sesión</Nav.Link>

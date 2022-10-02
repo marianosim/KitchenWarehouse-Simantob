@@ -1,6 +1,6 @@
 nav {
     /* background-color: #cce3de; */
-    background-color: rgb(31, 23, 23);
+    background-color: rgb(245, 244, 244);
 }
 .logo {
     width: 12vh;
@@ -13,22 +13,22 @@ i {
 }
 .cart-icon {
     font-size: 1.5em;
-    color: #B26C4B;
+    color: #9D003E;
 }
 .brand-title{
     text-align: center;
     text-decoration: none !important;
-    color: #B26C4B !important;
+    color: #9D003E !important;
     /* color: white !important; */
     font-size: 1em !important;
     font-weight: bold;
 }
 .navbar-link{
-    color: #B26C4B !important;
+    color: #9D003E !important;
     font-weight: bold !important;
 }
 #navbarScrollingDropdown{
-    color: #B26C4B;
+    color: #9D003E;
 }
 .navbar-alert{
     display: flex;

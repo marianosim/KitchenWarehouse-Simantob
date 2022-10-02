@@ -1,8 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import Badge from 'react-bootstrap/Badge';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 export default function CartWidget() {
+
+  const { getItemQty } = useContext(CartContext);
   return (
-    <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
+    <>
+    <FontAwesomeIcon icon={faCartShopping} className='cart-icon' style={{margin: 'auto'}}/>
+    <Badge bg='secondary' style={{marginLeft: '1em'}}>{getItemQty()}</Badge>
+    </>
+    
   )
 }
