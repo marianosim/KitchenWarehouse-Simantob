@@ -4,10 +4,10 @@ export const CartContext = createContext();
 
 const { Provider } = CartContext;
 
-const MyProvider = ({children}) => {
+const MyProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
-                
+
     const isInCart = (id) => {
         return cart.some(item => item.id === id);
     };
@@ -16,7 +16,7 @@ const MyProvider = ({children}) => {
             ...item,
             qty
         }
-        if (isInCart(newItem.id)){
+        if (isInCart(newItem.id)) {
             const findProduct = cart.find(item => item.id === newItem.id);
             const productIndex = cart.indexOf(findProduct);
             const auxCart = [...cart];
@@ -37,9 +37,9 @@ const MyProvider = ({children}) => {
         return cart.reduce((acc, item) => acc += item.qty, 0);
     };
     const getItemPrice = () => {
-        return cart.reduce((acc, item) => acc += item.price * item.qty, 0)
+        return cart.reduce((acc, item) => acc += Number(item.price) * item.qty, 0)
     };
-    return <Provider value={{cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice}}>{children}</Provider>
+    return <Provider value={{ cart, isInCart, addItem, emptyCart, deleteItem, getItemQty, getItemPrice }}>{children}</Provider>
 };
 
 export default MyProvider;

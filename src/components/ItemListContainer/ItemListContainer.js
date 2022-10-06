@@ -8,34 +8,38 @@ import { useParams } from 'react-router-dom';
 
 export default function ItemListContainer({ greeting }) {
 
-  const [isLoading, setIsLoading] = useState(true);
+  
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { cat } = useParams();
 
   useEffect(() => {
+    setIsLoading(true)
     if (cat === undefined) {
       getItems()
         .then(data => {
           setItems(data)
         })
+        .finally(() => setIsLoading(false))
     } else {
+      setIsLoading(true)
       getItemsByCategory(cat)
         .then(data => setItems(data))
-    }
+        .finally(() => setIsLoading(false))
+    } 
   }, [cat]);
-  setTimeout(() => {
-    setIsLoading(false)
-  }, 2000)
+  // setTimeout(() => {
+  //   setIsLoading(false)
+  // }, 2000)
   return (
     <>
+      {isLoading ? <LoadSpinner /> :
       <Container fluid className='product-list'>
-        {isLoading && <LoadSpinner />}
-        {isLoading ||
           <div>
             <h4 className='greeting'>{greeting}</h4>
             <ItemList items={items} />
-          </div>}
-      </Container>
+          </div>
+      </Container>}
     </>
   )
 };

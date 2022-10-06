@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
   return (
     <>
+      <div className='top-banner'> <span >Envío gratis en compras superiores a $15.000</span></div>
       <Navbar expand="lg">
         <Container fluid>
           <Link to='/'>
@@ -58,7 +59,7 @@ function NavBar() {
               <Button variant="outline-success"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
             </Form>
           </Navbar.Collapse>
-          <Nav.Link href='#action4' className='p-4'><CartWidget /></Nav.Link>
+          <Nav.Link as={Link} to='/cart' className='p-4'><CartWidget /></Nav.Link>
         </Container>
       </Navbar>
       <Alert variant='secondary' style={{borderTop: '2px solid #c3bfbf', borderBottom: '2px solid #c3bfbf'}}>

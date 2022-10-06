@@ -27,7 +27,7 @@ function ItemDetail({ item }) {
         <div>
           <h2>{item.title}</h2>
           <Rating />
-          <h4>{item.price}</h4>
+          <h4>${item.price}</h4>
           {!itemsOnCart ?
             <ItemCount qty={qty} setQty={setQty} stock={5} onAddToCart={handleAddToCart} /> : <Button as={Link} to={'/cart'}>Finalizar compra</Button>}
         </div>

@@ -2,6 +2,12 @@ nav {
     /* background-color: #cce3de; */
     background-color: rgb(245, 244, 244);
 }
+.top-banner{
+    background-color: rgb(77, 77, 77);
+    font-size: 0.7em;
+    text-align: center;
+    color: white;
+}
 .logo {
     width: 12vh;
 }
