@@ -17,7 +17,6 @@ function ItemDetail({ item }) {
 
   const handleAddToCart = () => {
     addItem(item, qty);
-    // alert(`Agregaste ${qty} producto/s a tu carrito`)
     setItemsOnCart(true);
   }
   return (

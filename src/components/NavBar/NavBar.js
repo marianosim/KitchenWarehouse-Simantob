@@ -62,10 +62,10 @@ function NavBar() {
           <Nav.Link as={Link} to='/cart' className='p-4'><CartWidget /></Nav.Link>
         </Container>
       </Navbar>
-      <Alert variant='secondary' style={{borderTop: '2px solid #c3bfbf', borderBottom: '2px solid #c3bfbf'}}>
+      <Alert variant='secondary' style={{ borderTop: '2px solid #c3bfbf', borderBottom: '2px solid #c3bfbf' }}>
         <div className='navbar-alert'>
-        <Nav.Link as={Link} to='/' className='register-link'>Creá tu cuenta</Nav.Link>
-        <Nav.Link as={Link} to='/' className='sign-in-link'>Iniciá Sesión</Nav.Link>
+          <Nav.Link as={Link} to='/' className='register-link'>Creá tu cuenta</Nav.Link>
+          <Nav.Link as={Link} to='/' className='sign-in-link'>Iniciá Sesión</Nav.Link>
         </div>
       </Alert>
     </>

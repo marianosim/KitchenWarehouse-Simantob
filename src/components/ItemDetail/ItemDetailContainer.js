@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
-import { getSingleItem } from '../../services/MockApi';
+import { getSingleItem } from '../../services/firestore';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import LoadSpinner from '../Spinner/Spinner';
@@ -15,10 +15,8 @@ function ItemDetailContainer() {
       .then(data => {
         setItem(data)
       })
+      .finally(setIsLoading(false))
   }, []);
-  setTimeout(() => {
-    setIsLoading(false)
-  }, 2000)
 
   return (
     <Container fluid >
