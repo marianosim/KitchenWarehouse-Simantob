@@ -8,9 +8,9 @@ export default function CartWidget() {
 
   const { getItemQty } = useContext(CartContext);
   return (
-    <div className='d-flex align-items-center' style={{paddingLeft: '3em'}}>
-    <FontAwesomeIcon icon={faCartShopping} className='cart-icon'/>
-    <Badge bg='secondary' style={{marginLeft: '1em'}}>{getItemQty() > 0 && getItemQty()}</Badge>
+    <div className='d-flex align-items-center' style={{ paddingLeft: '3em' }}>
+      <FontAwesomeIcon icon={faCartShopping} className='cart-icon' />
+      <Badge bg='secondary' style={{ marginLeft: '1em' }}>{getItemQty() > 0 && getItemQty()}</Badge>
     </div>
   )
 }

@@ -2,26 +2,32 @@ nav {
     /* background-color: #cce3de; */
     background-color: rgb(245, 244, 244);
 }
-.top-banner{
+
+.top-banner {
     background-color: rgb(77, 77, 77);
     font-size: 0.7em;
     text-align: center;
     color: white;
 }
+
 .logo {
     width: 12vh;
 }
+
 .navbar-toggler {
     background-color: rgb(240, 224, 224) !important;
 }
+
 i {
     color: white;
 }
+
 .cart-icon {
     font-size: 1.5em;
     color: #9D003E;
 }
-.brand-title{
+
+.brand-title {
     text-align: center;
     text-decoration: none !important;
     color: #9D003E !important;
@@ -29,23 +35,28 @@ i {
     font-size: 1em !important;
     font-weight: bold;
 }
-.navbar-link{
+
+.navbar-link {
     color: #9D003E !important;
     font-weight: bold !important;
 }
-#navbarScrollingDropdown{
+
+#navbarScrollingDropdown {
     color: #9D003E;
 }
-.navbar-alert{
+
+.navbar-alert {
     display: flex;
     justify-content: right;
 }
-.register-link{
+
+.register-link {
     font-size: 1rem !important;
     padding-right: 1em !important;
     font-weight: bold !important;
 }
-.sign-in-link{
+
+.sign-in-link {
     font-size: 1rem !important;
     font-weight: bold !important;
 }

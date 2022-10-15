@@ -30,10 +30,10 @@ function ItemDetail({ item }) {
             <Rating />
             <h4>${item.price}</h4>
             {!itemsOnCart ?
-              <ItemCount qty={qty} setQty={setQty} stock={5} onAddToCart={handleAddToCart} /> : 
+              <ItemCount qty={qty} setQty={setQty} stock={5} onAddToCart={handleAddToCart} /> :
               <>
-              <Button as={Link} to={'/cart'} className='goToCart-btn'>Ir al carrito</Button>
-              <Button as={Link} to={'/'}>Seguir comprando</Button>
+                <Button as={Link} to={'/cart'} className='goToCart-btn'>Ir al carrito</Button>
+                <Button as={Link} to={'/'}>Seguir comprando</Button>
               </>}
           </div>
           <div className='fluid product-description'>

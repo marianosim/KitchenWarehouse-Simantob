@@ -14,16 +14,16 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <MyProvider>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer greeting={greeting}/>}/>
-          <Route path='/item/:id' element={<ItemDetailContainer/>} />
-          <Route path='/category/:cat' element={<ItemListContainer />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/checkout/:orderId' element={<Checkout />}/>
-        </Routes>
-        <Footer />
+        <MyProvider>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting={greeting} />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/category/:cat' element={<ItemListContainer />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout/:orderId' element={<Checkout />} />
+          </Routes>
+          <Footer />
         </MyProvider>
       </BrowserRouter>
     </div>

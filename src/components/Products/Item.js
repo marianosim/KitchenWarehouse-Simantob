@@ -8,15 +8,15 @@ function Item({ item }) {
   return (
     <>
       <Card style={{ width: '22rem', margin: '2%', textDecoration: 'none' }}>
-          <Card.Img variant="top" src={item.image} className='product-image' />
-          <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-            <Card.Text>
-              ${item.price}
-            </Card.Text>
-          </Card.Body>
-          {/* <Link to={`/item/${item.id}`} style={{ color: 'inherit', textDecoration: 'none' }}> */}
-          <Button as={Link} to={`/item/${item.id}`} variant='outline-danger' style={{fontWeight: 'bold'}}>Ver más</Button>
+        <Card.Img variant="top" src={item.image} className='product-image' />
+        <Card.Body>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Text>
+            ${item.price}
+          </Card.Text>
+        </Card.Body>
+        {/* <Link to={`/item/${item.id}`} style={{ color: 'inherit', textDecoration: 'none' }}> */}
+        <Button as={Link} to={`/item/${item.id}`} variant='outline-danger' style={{ fontWeight: 'bold' }}>Ver más</Button>
         {/* </Link> */}
       </Card>
     </>
