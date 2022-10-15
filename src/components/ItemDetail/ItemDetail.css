@@ -1,20 +1,24 @@
-.product-detail{
+.product-detail {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1.5em;
 }
-.product-detail h2{
+
+.product-detail h2 {
     margin-bottom: 1em;
     font-weight: bold;
 }
-.product-detail h4{
+
+.product-detail h4 {
     margin-top: 1em;
 }
-.product-detail-image{
+
+.product-detail-image {
     padding-left: 1%;
     max-width: 100%;
 }
-.product-description{
+
+.product-description {
     font-size: 1.5rem;
     width: auto;
     text-align: justify;
@@ -22,6 +26,11 @@
     padding-top: 5rem;
     padding-right: 1em;
 }
-.item-detail-container{
+
+.item-detail-container {
     margin-bottom: 5em;
+}
+
+.goToCart-btn {
+    margin-right: 2em;
 }

@@ -1,11 +1,14 @@
+.cart-container{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 5em;
+}
 .cart-container h1{
     font-weight: bold;
     margin-left: 1em;
 }
 .empty-cart-btn{
-    position: fixed;
     right: 1em;
-    margin-top: 2em;
     font-weight: bold;
 }
 .empty-cart-container{
@@ -17,4 +20,7 @@
 .return-home-btn{
     margin-top: 3em;
     font-size: 1em;
+}
+.cart-header {
+    margin-bottom: 2em;
 }

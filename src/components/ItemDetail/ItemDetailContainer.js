@@ -11,6 +11,7 @@ function ItemDetailContainer() {
 
   const { id } = useParams();
   useEffect(() => {
+    setIsLoading(true)
     getSingleItem(id)
       .then(data => {
         setItem(data)
@@ -20,8 +21,7 @@ function ItemDetailContainer() {
 
   return (
     <Container fluid >
-      {isLoading && <LoadSpinner />}
-      {isLoading ||
+      {isLoading ? <LoadSpinner /> :
         <ItemDetail item={item} />}
     </Container>
   )

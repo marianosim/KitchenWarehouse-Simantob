@@ -9,30 +9,34 @@ import { CartContext } from '../../context/CartContext';
 import { OverlayTrigger } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './cart.css'
+import CheckoutForm from '../CheckoutForm/CheckoutForm';
 
 
 function Cart() {
     const { cart, getItemPrice, deleteItem, emptyCart } = useContext(CartContext);
+
     return (
         <>
             {cart.length > 0 ?
-                <>
-                    <div className='d-flex justify-content-between cart-container'>
+                <div className='cart-container'>
+                    <div className='d-flex justify-content-between cart-header'>
                         <h1>¡Tu carrito de compra!</h1>
-
+                        <Button variant='outline-danger' className='empty-cart-btn' onClick={() => emptyCart()}>Vaciar carrito</Button>
                     </div>
                     <Table striped bordered hover responsive style={{ margin: 'auto', verticalAlign: 'middle', textAlign: 'center' }}>
-                        <thead>
-                            <tr>
+                        <thead style={{ backgroundColor: '#8f033b' }}>
+                            <tr style={{ color: 'white' }}>
                                 <th></th>
                                 <th>Producto</th>
                                 <th>Cantidad</th>
-                                <th>Precio unitario</th>
-                                <th></th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
+                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -46,6 +50,7 @@ function Cart() {
                                     <td>{item.title}</td>
                                     <td>{item.qty}</td>
                                     <td>${(item.price).toLocaleString('es-AR')}</td>
+                                    <td>$ {(item.price * item.qty).toLocaleString('es-AR')}</td>
                                     <td><OverlayTrigger
                                         overlay={
                                             <Tooltip id={'tooltip-top'}>
@@ -58,11 +63,11 @@ function Cart() {
                             })}
                         </tbody>
                     </Table>
-                    <Button variant='outline-danger' className='empty-cart-btn' onClick={() => emptyCart()}>Vaciar carrito</Button>
-                </> :
+                    <CheckoutForm />
+                </div> :
                 <div className='empty-cart-container'>
                     <h2>Tu carrito está vacío</h2>
-                    <Image src={EmptyCartImage} width='20%'/>
+                    <Image src={EmptyCartImage} width='20%' />
                     <h4>¡Te invitamos a mirar nuestro productos!</h4>
                     <Button as={Link} to='/' className='return-home-btn'> Volver al Home</Button>
                 </div>
