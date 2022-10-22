@@ -15,7 +15,7 @@
 
 .product-detail-image {
     padding-left: 1%;
-    max-width: 100%;
+    max-width: 40%;
 }
 
 .product-description {
@@ -23,8 +23,6 @@
     width: auto;
     text-align: justify;
     margin: auto;
-    padding-top: 5rem;
-    padding-right: 1em;
 }
 
 .item-detail-container {
@@ -33,4 +31,9 @@
 
 .goToCart-btn {
     margin-right: 2em;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
 }

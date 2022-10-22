@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -9,10 +8,9 @@ import {
   query,
   where,
   addDoc,
-  setDoc
 } from 'firebase/firestore';
 
-// Your web app's Firebase configuration
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBCkHXkt1Np0qpMu1RPl7N072jEUc0h9IE",
   authDomain: "kitchenwarehouse-7ed28.firebaseapp.com",
@@ -26,7 +24,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
-//Gets all items in 'products' collection
 export const getItems = async () => {
   try {
     const myCollection = collection(firestore, 'products');
@@ -44,18 +41,20 @@ export const getItems = async () => {
   }
 };
 
-//Gets one product in 'products' collection
 export const getSingleItem = async (idParams) => {
   try {
     const docRef = doc(firestore, 'products', idParams);
     const docSnapShot = await getDoc(docRef);
-    return { ...docSnapShot.data(), id: docSnapShot.id };
+    if (docSnapShot.exists()) {
+      return { ...docSnapShot.data(), id: docSnapShot.id };
+    } else {
+      throw new Error('Item no encontrado')
+    }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
-//Shows products filtered by category
 export const getItemsByCategory = async (catParams) => {
   try {
     const myCollection = collection(firestore, 'products');
@@ -70,14 +69,12 @@ export const getItemsByCategory = async (catParams) => {
   }
 };
 
-//Creates a shopping order with info of buyer, items, date, total 
 export const createBuyOrder = async (orderData) => {
   const collectionRef = collection(firestore, 'orders');
   let doc = await addDoc(collectionRef, orderData)
   return doc.id;
 }
 
-//Retrieves a shopping order info
 export const getBuyOrder = async (orderIdParams) => {
   try {
     const docRef = doc(firestore, 'orders', orderIdParams);

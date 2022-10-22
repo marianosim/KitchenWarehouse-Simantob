@@ -5,6 +5,7 @@ import { getItems, getItemsByCategory } from '../../services/firestore.js';
 import ItemList from '../Products/ItemList';
 import LoadSpinner from '../Spinner/Spinner';
 import { useParams } from 'react-router-dom';
+import CarouselFade from '../Carousel/Carousel';
 
 export default function ItemListContainer({ greeting }) {
 
@@ -32,8 +33,9 @@ export default function ItemListContainer({ greeting }) {
     <>
       {isLoading ? <LoadSpinner /> :
         <Container fluid className='product-list'>
+          <CarouselFade />
           <div>
-            <h4 className='greeting'>{greeting}</h4>
+            <h3 className='greeting'>{greeting}</h3>
             <ItemList items={items} />
           </div>
         </Container>}

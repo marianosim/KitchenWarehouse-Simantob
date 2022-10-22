@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
@@ -10,7 +9,7 @@ import Checkout from './components/Checkout/Checkout';
 import MyProvider from './context/CartContext';
 
 function App() {
-  let greeting = '¡Bienvenidos a nuestra tienda!';
+  let greeting = 'Nuestros productos:';
   return (
     <div className="App">
       <BrowserRouter>
@@ -22,6 +21,7 @@ function App() {
             <Route path='/category/:cat' element={<ItemListContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout/:orderId' element={<Checkout />} />
+            <Route path='*' element={<h1>404: No encontramos lo que buscabas</h1>} />
           </Routes>
           <Footer />
         </MyProvider>

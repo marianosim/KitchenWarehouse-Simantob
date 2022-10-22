@@ -8,11 +8,9 @@ const MyProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    //Looks up if an item is in cart
     const isInCart = (id) => {
         return cart.some(item => item.id === id);
     };
-    //Adds an item to cart
     const addItem = (item, qty) => {
         const newItem = {
             ...item,
@@ -27,21 +25,16 @@ const MyProvider = ({ children }) => {
         } else {
             setCart([...cart, newItem]);
         }
-        // isInCart(newItem.id)?  : setCart([...cart, newItem])
     };
-    //Removes all items from cart
     const emptyCart = () => {
         return setCart([]);
     };
-    //Removes one item from cart
     const deleteItem = (id) => {
         return setCart(cart.filter(item => item.id !== id));
     };
-    //Gets total items in cart
     const getItemQty = () => {
         return cart.reduce((acc, item) => acc += item.qty, 0);
     };
-    //Gets total price of cart
     const getItemPrice = () => {
         return cart.reduce((acc, item) => acc += Number(item.price) * item.qty, 0)
     };

@@ -15,12 +15,10 @@ function Item({ item }) {
             ${item.price}
           </Card.Text>
         </Card.Body>
-        {/* <Link to={`/item/${item.id}`} style={{ color: 'inherit', textDecoration: 'none' }}> */}
         <Button as={Link} to={`/item/${item.id}`} variant='outline-danger' style={{ fontWeight: 'bold' }}>Ver más</Button>
-        {/* </Link> */}
       </Card>
     </>
   )
 }
 
-export default Item
+export default Item;

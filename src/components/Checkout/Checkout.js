@@ -18,8 +18,8 @@ const Checkout = () => {
     setIsLoading(true);
     getBuyOrder(orderId)
       .then(data => setOrder(data))
-      .finally(setIsLoading(false), emptyCart())
-  }, [orderId]);
+      .finally(() => setIsLoading(false), emptyCart())
+  }, []);
   return (
     <>
       {isLoading ? <LoadSpinner /> :

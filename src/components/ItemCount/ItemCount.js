@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import './ItemCount.css';
 
 function ItemCount({ qty, setQty, stock, onAddToCart }) {
-    //const [count, setCount] = useState(initial);
 
     const handleAdd = () => {
         qty < stock ? setQty(qty + 1) : alert('La cantidad solicitada supera el stock disponible')

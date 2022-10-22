@@ -1,14 +1,10 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Alert from 'react-bootstrap/Alert';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../assets/Images/KWLogo_redVariant.png';
 import './navbar.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { NavbarBrand } from 'react-bootstrap';
 import CartWidget from './CartWidget';
 import { Link } from 'react-router-dom';
@@ -31,7 +27,6 @@ function NavBar() {
               className="ms-auto my-2 my-lg-0"
               style={{ maxHeight: '100px' }}
               navbarScroll>
-              <Nav.Link as={Link} to='/' className='navbar-link'>Todos los productos</Nav.Link>
               <NavDropdown title='Categorías' id="navbarScrollingDropdown">
                 <NavDropdown.Item as={Link} to={'/category/cocina'} className='navbar-link'>Cocina</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to={'/category/pasteleria'} className='navbar-link'>
@@ -49,17 +44,8 @@ function NavBar() {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Buscá tu producto..."
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
-            </Form>
           </Navbar.Collapse>
-          <Nav.Link as={Link} to='/cart' className='p-4'><CartWidget /></Nav.Link>
+          <Nav.Link as={Link} to='/cart' className='p-4 cart-widget'><CartWidget /></Nav.Link>
         </Container>
       </Navbar>
       <Alert variant='secondary' style={{ borderTop: '2px solid #c3bfbf', borderBottom: '2px solid #c3bfbf' }}>
