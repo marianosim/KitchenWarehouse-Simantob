@@ -6,6 +6,10 @@
 El presente proyecto consta en el frontend de un e-commerce de venta de artículos de cocina y pastelería. 
 Realizado en el marco del curso de React de [CoderHouse](https://www.coderhouse.com/).
 
+### Deploy del site: https://kitchenwarehouse.netlify.app/
+
+![](https://res.cloudinary.com/dzxg6dw84/image/upload/v1666394115/KitchenWarehouse/KW_navigation_final_zc1vcg.gif)
+
 ## INSTALACIÓN
 ### 1.Clonar el proyecto:
 ```bash
